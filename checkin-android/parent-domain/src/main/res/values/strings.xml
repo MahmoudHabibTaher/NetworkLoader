@@ -1,0 +1,9 @@
+<resources>
+    <string name="no_internet_connection_error">Oops No signal, check your internet connection.</string>
+    <string name="connection_timeout_error">Connection time-out.</string>
+    <string name="leave_vacation_name">Vacation</string>
+    <string name="leave_sick_name">Sick</string>
+    <string name="recipient_class_or_group_description_holder">%s children</string>
+    <string name="file_exceeds_limit_error">File Size Is Too Big, Maximum is %d MB</string>
+    <string name="invalid_file_extensions_error">Only %s are allowed.</string>
+</resources>
