@@ -1,6 +1,5 @@
 package com.parent.domain.institutions
 
-import com.parent.entities.WeekStart
 import com.parent.domain.base.BaseSingleUseCase
 import com.parent.domain.base.Params
 import com.parent.domain.executor.PostThreadExecutor

@@ -1,12 +1,8 @@
 package com.parent.domain.children.data
 
-import com.parent.entities.ChildHealthModel
 import com.parent.entities.ChildModel
 import com.parent.entities.ChildPickupModel
 import com.parent.entities.ClassChild
-import com.parent.entities.ChildLeaves
-import com.parent.entities.ChildPermission
-import com.parent.entities.DailyReport
 import io.reactivex.Completable
 import io.reactivex.Single
 

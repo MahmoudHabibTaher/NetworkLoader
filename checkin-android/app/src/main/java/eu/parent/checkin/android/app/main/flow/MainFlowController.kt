@@ -17,7 +17,7 @@ import eu.parent.android.app.newsfeed.list.presentation.NewsFeedFragment
 import eu.parent.android.app.notifications.presentation.NotificationsFragment
 import eu.parent.android.app.options.presentation.OptionsFragment
 import eu.parent.android.app.overview.presentation.OverviewFragment
-import eu.parent.android.app.user.auth.login.presentation.LoginActivity
+import eu.parent.checkin.android.app.user.auth.login.presentation.LoginActivity
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.debug
 

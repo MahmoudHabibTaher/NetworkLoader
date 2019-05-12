@@ -7,7 +7,6 @@ import com.parent.domain.base.Params
 import com.parent.domain.base.SingleUseCase
 import com.parent.domain.executor.test.TestExecutor
 import com.parent.domain.executor.test.TestPostExecutor
-import com.parent.entities.exceptions.FileExtensionNotSupportedException
 import io.reactivex.Completable
 import io.reactivex.Single
 import org.amshove.kluent.any

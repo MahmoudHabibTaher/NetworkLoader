@@ -1,6 +1,5 @@
 package com.parent.domain.children.contacts.mappers
 
-import com.parent.entities.AddNewChildContactRequest
 import com.parent.entities.ChildContactModel
 import com.parent.domain.base.mappers.ModelMapper
 

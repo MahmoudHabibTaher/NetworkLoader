@@ -20,7 +20,7 @@ import eu.parent.android.app.DispatchActivity
 import eu.parent.android.app.R
 import eu.parent.android.app.common.presentation.errors.PresentationError
 import eu.parent.android.app.common.presentation.language.StringProvider
-import eu.parent.android.app.main.presentation.MainActivity
+import eu.parent.checkin.android.app.main.presentation.MainActivity
 import io.reactivex.*
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy

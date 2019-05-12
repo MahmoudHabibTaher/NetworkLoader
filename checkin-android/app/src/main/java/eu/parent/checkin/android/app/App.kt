@@ -1,10 +1,9 @@
-package eu.parent.android.app
+package eu.parent.checkin.android.app
 
 import android.app.Application
 import android.support.v7.app.AppCompatDelegate
 import com.crashlytics.android.Crashlytics
 import com.github.salomonbrys.kodein.*
-import com.github.salomonbrys.kodein.android.appKodein
 import com.github.salomonbrys.kodein.android.autoAndroidModule
 import com.parent.domain.DomainIntegration
 import com.parent.domain.common.prefs.Prefs
@@ -12,7 +11,6 @@ import com.parent.domain.common.prefs.PrefsManager
 import eu.parent.android.app.common.di.appModule
 import eu.parent.android.app.common.presentation.actvities.BaseActivityLifeCycleCallbacks
 import eu.parent.android.app.common.presentation.language.StringProvider
-import eu.parent.android.app.domain.notifications.PushNotificationManager
 import io.fabric.sdk.android.Fabric
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 
@@ -37,7 +35,6 @@ class App : Application(), KodeinAware {
         CalligraphyConfig.initDefault(calligraphyDefaultConfig())
         initFabric()
         DomainIntegration.with(this)
-        initPusNotificationsManager()
         registerActivityLifecycleCallbacks(BaseActivityLifeCycleCallbacks())
         StringProvider.init(this)
     }
@@ -53,11 +50,4 @@ class App : Application(), KodeinAware {
             Fabric.with(this, Crashlytics())
         }
     }
-
-
-    private fun initPusNotificationsManager() {
-        val lazyKodein = LazyKodein(appKodein)
-        PushNotificationManager.initPushNotification(this@App, lazyKodein)
-    }
-
 }

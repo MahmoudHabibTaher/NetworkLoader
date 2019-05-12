@@ -9,7 +9,6 @@ import com.parent.domain.common.network.toErrorResponseModel
 import com.parent.domain.datetime.IDateTimeConverter
 import com.parent.entities.*
 import com.parent.entities.exceptions.ItemNotFoundException
-import com.parent.entities.exceptions.NoChildPermissionsAddedException
 import com.parent.entities.exceptions.NotAuthorizedException
 import com.parent.entities.exceptions.ValidationErrorsException
 import io.reactivex.Completable

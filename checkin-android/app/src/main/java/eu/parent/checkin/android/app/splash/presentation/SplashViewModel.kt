@@ -1,4 +1,4 @@
-package eu.parent.android.app.splash.presentation
+package eu.parent.checkin.android.app.splash.presentation
 
 import android.app.Application
 import com.github.salomonbrys.kodein.Kodein

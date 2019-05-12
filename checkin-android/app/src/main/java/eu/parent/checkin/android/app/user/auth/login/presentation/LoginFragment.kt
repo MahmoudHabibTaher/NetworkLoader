@@ -1,19 +1,16 @@
-package eu.parent.android.app.user.auth.login.presentation
+package eu.parent.checkin.android.app.user.auth.login.presentation
 
 import android.os.Bundle
 import android.view.View
 import com.github.salomonbrys.kodein.factory
-import com.jakewharton.rxbinding2.view.clicks
-import eu.parent.android.app.R
 import eu.parent.android.app.common.presentation.actvities.BaseActivity
 import eu.parent.android.app.common.presentation.dialogs.ErrorDialog
 import eu.parent.android.app.common.presentation.dialogs.RetryErrorDialog
-import eu.parent.android.app.common.presentation.extensions.visible
 import eu.parent.android.app.common.presentation.fragments.BaseFragment
 import eu.parent.android.app.common.presentation.interfaces.addDisposable
 import eu.parent.android.app.common.presentation.viewmodels.BaseViewModel
-import eu.parent.android.app.user.auth.login.flow.LoginFlow
-import eu.parent.android.app.user.auth.login.flow.LoginFlowController
+import eu.parent.checkin.android.app.user.auth.login.flow.LoginFlow
+import eu.parent.checkin.android.app.user.auth.login.flow.LoginFlowController
 import io.reactivex.rxkotlin.subscribeBy
 import kotlinx.android.synthetic.main.fragment_login.*
 
@@ -96,12 +93,6 @@ class LoginFragment : BaseFragment() {
             when (it) {
                 LoginViewModel.NavigationEvent.HOME -> {
                     loginFlow.showHomeScreen()
-                }
-                LoginViewModel.NavigationEvent.ACCOUNT_ACTIVATION -> {
-                    loginFlow.showRequestActivationLinkScreen(email)
-                }
-                LoginViewModel.NavigationEvent.FORGOT_PASSWORD -> {
-                    loginFlow.showForgetPassword()
                 }
             }
         }))

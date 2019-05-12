@@ -3,7 +3,6 @@ package com.parent.domain.institutions
 import com.parent.entities.DateFormat
 import com.parent.entities.InstituteOptions
 import com.parent.entities.TimeFormat
-import com.parent.entities.WeekStart
 import com.parent.domain.base.BaseDataSource
 import io.reactivex.Completable
 import io.reactivex.Single

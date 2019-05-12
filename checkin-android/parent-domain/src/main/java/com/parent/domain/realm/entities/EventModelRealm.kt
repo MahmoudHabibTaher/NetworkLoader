@@ -1,7 +1,6 @@
 package com.parent.domain.realm.entities
 
 import com.parent.entities.IBuilder
-import com.parent.entities.Event
 import io.realm.RealmList
 import io.realm.RealmObject
 

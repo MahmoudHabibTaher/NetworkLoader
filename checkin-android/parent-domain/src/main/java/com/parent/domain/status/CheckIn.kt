@@ -7,8 +7,6 @@ import com.parent.domain.executor.PostThreadExecutor
 import com.parent.domain.executor.ThreadExecutor
 import com.parent.domain.location.LocationHelper
 import com.parent.entities.InstitutionModel
-import com.parent.entities.exceptions.LocationOutOfRangeException
-import com.parent.entities.exceptions.MissingInstitueLocationInfoException
 import io.reactivex.Single
 
 /**

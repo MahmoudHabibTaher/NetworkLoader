@@ -1,8 +1,8 @@
-package eu.parent.android.app.splash.flow
+package eu.parent.checkin.android.app.splash.flow
 
 import android.app.Activity
-import eu.parent.android.app.main.presentation.MainActivity
-import eu.parent.android.app.user.auth.login.presentation.LoginActivity
+import eu.parent.checkin.android.app.main.presentation.MainActivity
+import eu.parent.checkin.android.app.user.auth.login.presentation.LoginActivity
 import org.jetbrains.anko.startActivity
 
 /**

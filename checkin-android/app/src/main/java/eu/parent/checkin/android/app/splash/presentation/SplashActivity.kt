@@ -1,13 +1,12 @@
-package eu.parent.android.app.splash.presentation
+package eu.parent.checkin.android.app.splash.presentation
 
 import android.app.Activity
 import android.os.Bundle
 import com.github.salomonbrys.kodein.factory
-import eu.parent.android.app.R
 import eu.parent.android.app.common.presentation.actvities.BaseActivity
 import eu.parent.android.app.common.presentation.viewmodels.BaseViewModel
-import eu.parent.android.app.splash.flow.SplashFlow
-import kotlinx.android.synthetic.main.activity_splash.*
+import eu.parent.checkin.android.app.R
+import eu.parent.checkin.android.app.splash.flow.SplashFlow
 
 /**
  * Created by mahmoud on 9/8/17.

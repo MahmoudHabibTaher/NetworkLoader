@@ -1,4 +1,4 @@
-package eu.parent.android.app.user.auth.login.presentation
+package eu.parent.checkin.android.app.user.auth.login.presentation
 
 import android.app.Application
 import android.arch.lifecycle.ViewModel
@@ -15,11 +15,11 @@ import com.parent.domain.base.SingleUseCase
 class LoginViewModelFactory(private val application: Application,
                             private val kodein: Kodein,
                             private val userLogin: CompletableUseCase,
-                            private val getOneSignalToken: BaseSingleUseCase<String>,
-                            private val saveOneSignalToken: BaseCompletableUseCase,private val getUserLastEmail: SingleUseCase<String>) : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>?): T {
-        if (modelClass?.isAssignableFrom(LoginViewModel::class.java) ?: false) {
-            return LoginViewModel(application, kodein, userLogin, getOneSignalToken, saveOneSignalToken,getUserLastEmail) as T
+                            private val getUserLastEmail: SingleUseCase<String>) : ViewModelProvider.Factory {
+
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
+            return LoginViewModel(application, kodein, userLogin, getUserLastEmail) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

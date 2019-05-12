@@ -1,5 +1,4 @@
 ext.anko_version = '0.10.1'
-ext.constraint_layout_version = '1.0.2'
 ext.support_library_version = '26.1.0'
 ext.material_values_version = '1.1.1'
 ext.arch_components_version = '1.0.0-beta2'

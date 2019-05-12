@@ -14,10 +14,10 @@ android {
     def HTTP_LOGGING_ENABLED = "HTTP_LOGGING_ENABLED"
     def REALM_BROWSER_ENABLED = "REALM_BROWSER_ENABLED"
 
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -67,23 +67,22 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.21"
-    api "org.jetbrains.anko:anko-commons:0.10.1"
-    api "org.jetbrains.anko:anko-sdk25:0.10.1"
-    api "org.jetbrains.anko:anko-appcompat-v7:0.10.1"
-    api "io.reactivex.rxjava2:rxkotlin:2.2.0"
-    api "io.reactivex.rxjava2:rxandroid:2.0.1"
-    api "joda-time:joda-time:2.9.9"
-    api "com.jakewharton.rxrelay2:rxrelay:2.0.0"
-    api "com.squareup.retrofit2:retrofit:2.3.0"
-    api "com.squareup.retrofit2:converter-gson:2.3.0"
-    api "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
-    api "com.squareup.okhttp3:logging-interceptor:3.9.0"
-    api "com.github.pavlospt:rxfile:1.7"
-    api 'com.github.vicpinm:krealmextensions:1.1.5'
-    api 'com.github.vicpinm:krealmextensions-rxjava:1.1.5'
-    api 'com.github.vicpinm:krealmextensions-rxjava2:1.1.5'
-    api project(':rxfileselector')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.40"
+    implementation "org.jetbrains.anko:anko-commons:0.10.1"
+    implementation "org.jetbrains.anko:anko-sdk25:0.10.1"
+    implementation "org.jetbrains.anko:anko-appcompat-v7:0.10.1"
+    implementation "io.reactivex.rxjava2:rxkotlin:2.2.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+    implementation "joda-time:joda-time:2.9.9"
+    implementation "com.jakewharton.rxrelay2:rxrelay:2.0.0"
+    implementation "com.squareup.retrofit2:retrofit:2.3.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.3.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.9.0"
+    implementation "com.github.pavlospt:rxfile:1.7"
+    implementation 'com.github.vicpinm:krealmextensions:1.1.5'
+    implementation 'com.github.vicpinm:krealmextensions-rxjava:1.1.5'
+    implementation 'com.github.vicpinm:krealmextensions-rxjava2:1.1.5'
     api project(':parent-entities')
 
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"

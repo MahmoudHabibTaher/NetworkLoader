@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8eda79b4-8c7c-4bbc-a57c-56c897e9a827" name="Default" comment="" />
+    <list default="true" id="8eda79b4-8c7c-4bbc-a57c-56c897e9a827" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/App.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/App.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/common/di/AppModule.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/common/di/AppModule.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/common/presentation/glide/ParentAppGlideModule.java" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/common/presentation/glide/ParentAppGlideModule.java" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/common/presentation/viewmodels/BaseViewModel.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/common/presentation/viewmodels/BaseViewModel.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/common/presentation/widgets/TouchImageView.java" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/common/presentation/widgets/TouchImageView.java" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/main/flow/MainFlowController.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/main/flow/MainFlowController.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/main/presentation/MainActivity.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/main/presentation/MainActivity.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/di/SplashModule.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/di/SplashModule.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/flow/SplashFlow.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/flow/SplashFlow.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/flow/SplashFlowController.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/flow/SplashFlowController.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/presentation/SplashActivity.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/presentation/SplashActivity.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/presentation/SplashViewModel.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/presentation/SplashViewModel.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/presentation/SplashViewModelFactory.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/splash/presentation/SplashViewModelFactory.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/flow/LoginFlow.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/flow/LoginFlow.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/flow/LoginFlowController.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/flow/LoginFlowController.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/presentation/LoginActivity.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/presentation/LoginActivity.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/presentation/LoginFragment.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/presentation/LoginFragment.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/presentation/LoginViewModel.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/presentation/LoginViewModel.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/presentation/LoginViewModelFactory.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/auth/login/presentation/LoginViewModelFactory.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/di/LoginModule.kt" afterPath="$PROJECT_DIR$/../../checkin-android/app/src/main/java/eu/parent/checkin/android/app/user/di/LoginModule.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/app/version.properties" afterPath="$PROJECT_DIR$/../../checkin-android/app/version.properties" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/build.gradle" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/libraries.gradle" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/libraries.gradle" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/children/contacts/mappers/AddNewChildContactRequestRemoteModelMapper.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/children/contacts/mappers/AddNewChildContactRequestRemoteModelMapper.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/children/data/ChildrenDao.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/children/data/ChildrenDao.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/children/data/ChildrenRealmDao.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/children/data/ChildrenRealmDao.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/children/data/ChildrenRemoteDataSource.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/children/data/ChildrenRemoteDataSource.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/institutions/InstituteOptionsDataSource.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/institutions/InstituteOptionsDataSource.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/institutions/InstituteOptionsLocalDataSource.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/institutions/InstituteOptionsLocalDataSource.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/institutions/InstituteOptionsRepository.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/institutions/InstituteOptionsRepository.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/institutions/LoadWeekStarts.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/institutions/LoadWeekStarts.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/realm/entities/EventModelRealm.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/realm/entities/EventModelRealm.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/status/CheckIn.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/status/CheckIn.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/status/CheckOut.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/main/java/com/parent/domain/status/CheckOut.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/test/java/com/parent/domain/children/permissions/AddChildPermissionTest.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/test/java/com/parent/domain/children/permissions/AddChildPermissionTest.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/test/java/com/parent/domain/upload/UploadVideoTest.kt" afterPath="$PROJECT_DIR$/../../checkin-android/parent-domain/src/test/java/com/parent/domain/upload/UploadVideoTest.kt" />
+      <change beforePath="$PROJECT_DIR$/../../checkin-android/parent-entities/build.gradle" afterPath="$PROJECT_DIR$/../../checkin-android/parent-entities/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
+    </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -18,8 +58,18 @@
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-662">
-              <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+            <state relative-caret-position="253">
+              <caret line="92" column="31" lean-forward="false" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="typography.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Flutter/flutter/packages/flutter/lib/src/material/typography.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="74" column="18" lean-forward="false" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -27,9 +77,19 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lib/main.dart" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -37,6 +97,7 @@
     <option name="width" value="1680" />
     <option name="height" value="1024" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -80,6 +141,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="settings.editor.selected.configurable" value="android.studio.gradle" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -207,11 +269,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.502442" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.497558" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -223,7 +285,7 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -265,14 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ios/Runner/main.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -289,10 +343,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Flutter/flutter/packages/flutter/lib/src/material/typography.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="74" column="18" lean-forward="false" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-662">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        <state relative-caret-position="253">
+          <caret line="92" column="31" lean-forward="false" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
           <folding />
         </state>
       </provider>

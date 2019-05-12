@@ -1,20 +1,17 @@
-package eu.parent.android.app.user.auth.login.presentation
+package eu.parent.checkin.android.app.user.auth.login.presentation
 
 import android.app.Application
 import com.github.salomonbrys.kodein.Kodein
-import com.parent.domain.base.BaseSingleUseCase
 import com.parent.domain.base.CompletableUseCase
 import com.parent.domain.base.Params
 import com.parent.domain.base.SingleUseCase
 import com.parent.domain.common.validation.ValidationUtils
-import com.parent.domain.user.SavePushNotificationToken
 import com.parent.domain.user.UserLogin
 import com.parent.entities.exceptions.AccountNotActiveException
 import com.parent.entities.exceptions.InvalidLoginException
-import com.parent.entities.exceptions.InvalidToken
-import eu.parent.android.app.R
 import eu.parent.android.app.common.presentation.errors.PresentationError
 import eu.parent.android.app.common.presentation.viewmodels.KodeinBaseViewModel
+import eu.parent.checkin.android.app.R
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.subjects.PublishSubject
 
@@ -24,15 +21,13 @@ import io.reactivex.subjects.PublishSubject
 class LoginViewModel(application: Application,
                      kodein: Kodein,
                      private val userLogin: CompletableUseCase,
-                     private val getPushNotificationToken: BaseSingleUseCase<String>,
-                     private val savePushNotificationToken: CompletableUseCase,
                      private val getUserLastEmail: SingleUseCase<String>) : KodeinBaseViewModel(application, kodein) {
     enum class InputField {
         EMAIL, PASSWORD
     }
 
     enum class NavigationEvent {
-        HOME, ACCOUNT_ACTIVATION, FORGOT_PASSWORD
+        HOME
     }
 
     val validationErrorObservable = PublishSubject.create<Pair<InputField, String>>()
@@ -60,48 +55,17 @@ class LoginViewModel(application: Application,
                     UserLogin.PARAM_PASSWORD to password))
                     .subscribeBy(onComplete = {
                         onLoginSuccess()
-                        getPushNotificationUserId()
                     }, onError = {
                         isLoadingVisible = false
                         when (it) {
                             is AccountNotActiveException -> navigationEventObservable.onNext(NavigationEvent.ACCOUNT_ACTIVATION)
-                            is InvalidLoginException -> notifyError(it.message ?:
-                                    getString(R.string.unknown_server_error), PresentationError.ERROR_TEXT)
-                            else -> notifyError(it.message ?:
-                                    getString(R.string.unknown_server_error), PresentationError.ERROR_TEXT_RETRY)
+                            is InvalidLoginException -> notifyError(it.message
+                                    ?: getString(R.string.unknown_server_error), PresentationError.ERROR_TEXT)
+                            else -> notifyError(it.message
+                                    ?: getString(R.string.unknown_server_error), PresentationError.ERROR_TEXT_RETRY)
                         }
                     })
         }
-    }
-
-    fun getPushNotificationUserId() {
-        getPushNotificationToken.getSingle(Params("" to ""))
-                .subscribeBy(onSuccess = {
-                    SavePushNotificationUserId(it)
-                })
-    }
-
-
-    fun SavePushNotificationUserId(userId: String) {
-        isLoadingVisible = true
-        savePushNotificationToken.getCompletable(Params(SavePushNotificationToken.PARAM_TOKEN to userId))
-                .subscribeBy(onComplete = {
-                    onLoginSuccess()
-                }, onError = {
-                    isLoadingVisible = false
-                    when (it) {
-                        is AccountNotActiveException -> navigationEventObservable.onNext(NavigationEvent.ACCOUNT_ACTIVATION)
-                        is InvalidToken -> notifyError(it.message ?:
-                                getString(R.string.unknown_server_error), PresentationError.ERROR_TEXT)
-                        else -> notifyError(it.message ?:
-                                getString(R.string.unknown_server_error), PresentationError.ERROR_TEXT_RETRY)
-                    }
-                })
-    }
-
-
-    fun forgotPasswordClick() {
-        navigationEventObservable.onNext(NavigationEvent.FORGOT_PASSWORD)
     }
 
     private fun validateInput(email: String, password: String, onSuccess: () -> Unit) {

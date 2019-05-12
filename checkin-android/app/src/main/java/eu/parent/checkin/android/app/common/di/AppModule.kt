@@ -51,7 +51,7 @@ import eu.parent.android.app.recipients.di.recipientsDataModule
 import eu.parent.android.app.recipients.di.recipientsSearchDomainModule
 import eu.parent.android.app.recipients.di.recipientsSearchModule
 import eu.parent.android.app.roles.di.*
-import eu.parent.android.app.splash.di.splashModule
+import eu.parent.checkin.android.app.splash.di.splashModule
 import eu.parent.android.app.deeplink.di.deepLinkModule
 import eu.parent.android.app.language.di.languageModule
 import eu.parent.android.app.status.di.statusDataModule
@@ -60,7 +60,7 @@ import eu.parent.android.app.user.di.createPasswordModule
 import eu.parent.android.app.user.di.userDataModule
 import eu.parent.android.app.user.di.userDomainModule
 import eu.parent.android.app.user.di.forgetPasswordModule
-import eu.parent.android.app.user.di.loginModule
+import eu.parent.checkin.android.app.user.di.loginModule
 import eu.parent.android.app.user.di.checkResetLinkModule
 import eu.parent.android.app.user.di.requestResetPasswordLinkModule
 import eu.parent.android.app.user.di.resetPasswordModule

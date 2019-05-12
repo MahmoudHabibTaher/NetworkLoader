@@ -6,8 +6,6 @@ import com.parent.domain.children.ParamsConstants
 import com.parent.domain.children.data.ChildrenDataSource
 import com.parent.domain.executor.test.TestExecutor
 import com.parent.domain.executor.test.TestPostExecutor
-import com.parent.entities.AddChildPermissionRequest
-import com.parent.entities.AddChildPermissionResult
 import io.reactivex.Single
 import org.amshove.kluent.mock
 import org.junit.Before

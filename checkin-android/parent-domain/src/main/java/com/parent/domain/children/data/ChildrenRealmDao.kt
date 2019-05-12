@@ -1,13 +1,9 @@
 package com.parent.domain.children.data
 
 import com.vicpin.krealmextensions.*
-import com.parent.entities.ChildHealthModel
 import com.parent.entities.ChildModel
 import com.parent.entities.ChildPickupModel
 import com.parent.entities.ClassChild
-import com.parent.entities.ChildLeaves
-import com.parent.entities.ChildPermission
-import com.parent.entities.DailyReport
 import com.parent.domain.base.mappers.ModelMapper
 import com.parent.domain.base.mappers.mapFromWith
 import com.parent.domain.base.mappers.mapToWith
