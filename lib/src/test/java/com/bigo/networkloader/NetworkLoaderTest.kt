@@ -38,6 +38,8 @@ class NetworkLoaderTest {
 
         val response = HttpResponse(url, HttpsURLConnection.HTTP_OK, result)
 
+        whenever(cache.has(url)) doReturn false
+
         whenever(client.get(request)) doReturn Single.just(response)
 
         val testObserver = networkLoader.load(url, parser).test()
@@ -59,6 +61,8 @@ class NetworkLoaderTest {
             .url(url)
             .parser(parser)
             .build()
+
+        whenever(cache.has(url)) doReturn false
 
         whenever(client.get(request)) doReturn Single.error(HttpException(404, resultError))
 
@@ -85,6 +89,8 @@ class NetworkLoaderTest {
 
         val response = HttpResponse(url, HttpsURLConnection.HTTP_OK, result)
 
+        whenever(cache.has(url)) doReturn false
+
         whenever(client.get(request)) doReturn Single.just(response)
 
         val testObserver = networkLoader.load(url, parser).test()
@@ -94,6 +100,38 @@ class NetworkLoaderTest {
         verify(client).get(request)
 
         verify(cache).add(url, response)
+
+        testObserver.assertValue(result)
+    }
+
+    @Test
+    fun testDataInCacheLoadFromCache() {
+        val url = "https://wwww.example.com"
+        val parser = mock<ResponseParser<String>>()
+        val result = "Hello, World!"
+
+        val response = HttpResponse(url, HttpsURLConnection.HTTP_OK, result)
+
+        val request = HttpRequest.Builder<String>()
+            .url(url)
+            .parser(parser)
+            .build()
+
+        whenever(client.get(request)) doReturn Single.just(response)
+
+        whenever(cache.has(url)) doReturn true
+
+        whenever(cache.get(url)) doReturn response
+
+        val testObserver = networkLoader.load(url, parser).test()
+
+        testObserver.awaitTerminalEvent()
+
+        verify(cache).has(url)
+
+        verify(cache).get(url)
+
+        verifyZeroInteractions(client)
 
         testObserver.assertValue(result)
     }

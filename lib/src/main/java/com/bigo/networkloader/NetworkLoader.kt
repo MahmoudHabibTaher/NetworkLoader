@@ -12,13 +12,17 @@ class NetworkLoader(
     private val cache: Cache<String, HttpResponse<*>>
 ) {
     fun <T> load(url: String, parser: ResponseParser<T>): Single<T> =
-        httpClient.get(buildRequest(url, parser))
-            .doOnSuccess { response ->
-                addToCache(url, response)
-            }
-            .flatMap {
-                Single.just(it.data)
-            }
+        if (cache.has(url)) {
+            loadFromCache(url)
+        } else {
+            httpClient.get(buildRequest(url, parser))
+                .doOnSuccess { response ->
+                    addToCache(url, response)
+                }
+                .flatMap {
+                    Single.just(it.data)
+                }
+        }
 
     private fun <T> buildRequest(url: String, parser: ResponseParser<T>) =
         HttpRequest.Builder<T>()
@@ -29,4 +33,9 @@ class NetworkLoader(
     private fun addToCache(url: String, response: HttpResponse<*>) {
         cache.add(url, response)
     }
+
+    private fun <T> loadFromCache(url: String): Single<T> =
+        Single.fromCallable {
+            cache.get(url).data as T
+        }
 }

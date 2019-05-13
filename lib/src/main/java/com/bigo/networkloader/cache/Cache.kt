@@ -7,6 +7,8 @@ abstract class Cache<Key, Value>(private val capacity: Int) {
 
     abstract fun get(key: Key): Value
 
+    abstract fun has(key: Key): Boolean
+
     abstract fun clear()
 
     abstract fun size(): Int
