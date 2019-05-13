@@ -1,5 +1,6 @@
 package com.bigo.networkloader
 
+import com.bigo.networkloader.cache.Cache
 import com.bigo.networkloader.http.HttpClient
 import com.bigo.networkloader.http.HttpRequest
 import com.bigo.networkloader.http.HttpResponse
@@ -15,11 +16,13 @@ class NetworkLoaderTest {
 
     private val client = mock<HttpClient>()
 
+    private val cache = mock<Cache<String, HttpResponse<*>>>()
+
     private lateinit var networkLoader: NetworkLoader
 
     @Before
     fun setUp() {
-        networkLoader = NetworkLoader(client)
+        networkLoader = NetworkLoader(client, cache)
     }
 
     @Test
