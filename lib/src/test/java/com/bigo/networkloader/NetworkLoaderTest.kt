@@ -71,4 +71,30 @@ class NetworkLoaderTest {
         testObserver.assertError(HttpException::class.java)
         testObserver.assertErrorMessage(resultError)
     }
+
+    @Test
+    fun testLoadSuccessAddToCache() {
+        val url = "https://wwww.example.com"
+        val parser = mock<ResponseParser<String>>()
+        val result = "Hello, World!"
+
+        val request = HttpRequest.Builder<String>()
+            .url(url)
+            .parser(parser)
+            .build()
+
+        val response = HttpResponse(url, HttpsURLConnection.HTTP_OK, result)
+
+        whenever(client.get(request)) doReturn Single.just(response)
+
+        val testObserver = networkLoader.load(url, parser).test()
+
+        testObserver.awaitTerminalEvent()
+
+        verify(client).get(request)
+
+        verify(cache).add(url, response)
+
+        testObserver.assertValue(result)
+    }
 }
