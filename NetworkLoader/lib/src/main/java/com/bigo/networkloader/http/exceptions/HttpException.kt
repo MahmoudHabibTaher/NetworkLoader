@@ -5,4 +5,4 @@ import java.lang.Exception
 class HttpException(
     val errorCode: Int,
     val errorBody: String
-) : Exception()
+) : Exception(errorBody)

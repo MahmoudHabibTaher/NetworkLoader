@@ -2,7 +2,7 @@ package com.bigo.networkloader.http
 
 import com.bigo.networkloader.parser.ResponseParser
 
-class HttpRequest<T> private constructor(
+data class HttpRequest<T> private constructor(
     val url: String,
     val parser: ResponseParser<T>?
 ) {

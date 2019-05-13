@@ -11,15 +11,15 @@ import org.junit.Test
 import java.io.InputStream
 import javax.net.ssl.HttpsURLConnection
 
-class HttpClientTest {
+class HttpClientImplTest {
 
     private val connectionBuilder = mock<ConnectionBuilder>()
 
-    private lateinit var httpClient: HttpClient
+    private lateinit var httpClient: HttpClientImpl
 
     @Before
     fun setUp() {
-        httpClient = HttpClient(connectionBuilder)
+        httpClient = HttpClientImpl(connectionBuilder)
     }
 
     @Test
