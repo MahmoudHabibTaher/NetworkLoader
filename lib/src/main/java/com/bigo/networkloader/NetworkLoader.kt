@@ -15,13 +15,7 @@ class NetworkLoader(
         if (cache.has(url)) {
             loadFromCache(url)
         } else {
-            httpClient.get(buildRequest(url, parser))
-                .doOnSuccess { response ->
-                    addToCache(url, response)
-                }
-                .flatMap {
-                    Single.just(it.data)
-                }
+            loadFromNetwork(url, parser)
         }
 
     private fun <T> buildRequest(url: String, parser: ResponseParser<T>) =
@@ -38,4 +32,13 @@ class NetworkLoader(
         Single.fromCallable {
             cache.get(url).data as T
         }
+
+    private fun <T> loadFromNetwork(url: String, parser: ResponseParser<T>): Single<T> =
+        httpClient.get(buildRequest(url, parser))
+            .doOnSuccess { response ->
+                addToCache(url, response)
+            }
+            .flatMap {
+                Single.just(it.data)
+            }
 }
