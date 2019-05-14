@@ -1,11 +1,12 @@
 package com.bigo.networkloader.http
 
+import android.util.Log
 import com.bigo.networkloader.http.builder.ConnectionBuilder
 import com.bigo.networkloader.http.exceptions.HttpException
 import io.reactivex.Single
 import javax.net.ssl.HttpsURLConnection
 
-open class HttpClientImpl(private val connectionBuilder: ConnectionBuilder) {
+open class HttpClientImpl(private val connectionBuilder: ConnectionBuilder) : HttpClient {
     companion object {
         const val DEFAULT_READ_TIME_OUT = 10000 // 10 Seconds
         const val DEFAULT_CONNECTION_TIME_OUT = 10000 // 10 Seconds
@@ -14,8 +15,10 @@ open class HttpClientImpl(private val connectionBuilder: ConnectionBuilder) {
     var readTimeout = DEFAULT_READ_TIME_OUT
     var connectTimeout = DEFAULT_CONNECTION_TIME_OUT
 
-    fun <T> get(request: HttpRequest<T>): Single<HttpResponse<T>> =
+    override fun <T> get(request: HttpRequest<T>): Single<HttpResponse<T>> =
         Single.create { emitter ->
+            Log.d("Http", "Get: ${request.url}")
+
             var connection: HttpsURLConnection? = null
 
             emitter.setCancellable {
