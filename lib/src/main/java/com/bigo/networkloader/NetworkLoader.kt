@@ -30,7 +30,7 @@ class NetworkLoader(
 
     private fun <T> loadFromCache(url: String): Single<T> =
         Single.fromCallable {
-            cache.get(url).data as T
+            cache.get(url)?.data as T
         }
 
     private fun <T> loadFromNetwork(url: String, parser: ResponseParser<T>): Single<T> =
