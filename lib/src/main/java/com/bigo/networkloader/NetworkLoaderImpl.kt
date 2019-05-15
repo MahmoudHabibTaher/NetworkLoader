@@ -4,14 +4,15 @@ import com.bigo.networkloader.cache.Cache
 import com.bigo.networkloader.http.HttpClient
 import com.bigo.networkloader.http.HttpRequest
 import com.bigo.networkloader.http.HttpResponse
+import com.bigo.networkloader.parser.NetworkLoader
 import com.bigo.networkloader.parser.ResponseParser
 import io.reactivex.Single
 
-class NetworkLoader(
+class NetworkLoaderImpl(
     private val httpClient: HttpClient,
     private val cache: Cache<String, HttpResponse<*>>
-) {
-    fun <T> load(url: String, parser: ResponseParser<T>): Single<T> =
+) : NetworkLoader {
+    override fun <T> load(url: String, parser: ResponseParser<T>): Single<T> =
         if (cache.has(url)) {
             loadFromCache(url)
         } else {

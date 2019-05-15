@@ -12,17 +12,17 @@ import org.junit.Before
 import org.junit.Test
 import javax.net.ssl.HttpsURLConnection
 
-class NetworkLoaderTest {
+class NetworkLoaderImplTest {
 
     private val client = mock<HttpClient>()
 
     private val cache = mock<Cache<String, HttpResponse<*>>>()
 
-    private lateinit var networkLoader: NetworkLoader
+    private lateinit var networkLoader: NetworkLoaderImpl
 
     @Before
     fun setUp() {
-        networkLoader = NetworkLoader(client, cache)
+        networkLoader = NetworkLoaderImpl(client, cache)
     }
 
     @Test
