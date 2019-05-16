@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/default_screen_horizontal_margin"
+        android:layout_marginEnd="@dimen/default_screen_horizontal_margin"
+        android:layout_marginTop="@dimen/default_screen_vertical_margin"
+        app:cardUseCompatPadding="true"
+        android:layout_marginBottom="@dimen/default_screen_vertical_margin"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/pin_image_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@null"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/pin_image_size"/>
+
+        <TextView
+                android:id="@+id/user_name_text_view"
+                android:layout_width="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/user_avatar_image_view"
+                app:layout_constraintTop_toTopOf="@+id/user_avatar_image_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/user_name_end_margin"
+                tools:text="John Doe"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:id="@+id/user_avatar_image_view"
+                android:layout_width="@dimen/user_profile_image_size"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/user_name_text_view"
+                android:layout_marginEnd="@dimen/user_avatar_end_margin"
+                android:layout_marginBottom="@dimen/user_avatar_bottom_margin"
+                android:layout_height="@dimen/user_profile_image_size"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
