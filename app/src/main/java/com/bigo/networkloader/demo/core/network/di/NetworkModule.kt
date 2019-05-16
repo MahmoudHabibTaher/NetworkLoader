@@ -10,7 +10,7 @@ import com.bigo.networkloader.http.builder.ConnectionBuilder
 import com.bigo.networkloader.http.builder.HttpConnectionBuilder
 import com.bigo.networkloader.image.BitmapParser
 import com.bigo.networkloader.image.ImageLoader
-import com.bigo.networkloader.parser.NetworkLoader
+import com.bigo.networkloader.NetworkLoader
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance

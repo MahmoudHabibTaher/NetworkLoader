@@ -4,7 +4,6 @@ import com.bigo.networkloader.cache.Cache
 import com.bigo.networkloader.http.HttpClient
 import com.bigo.networkloader.http.HttpRequest
 import com.bigo.networkloader.http.HttpResponse
-import com.bigo.networkloader.parser.NetworkLoader
 import com.bigo.networkloader.parser.ResponseParser
 import io.reactivex.Single
 

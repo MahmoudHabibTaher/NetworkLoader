@@ -9,7 +9,7 @@ import com.bigo.networkloader.demo.pins.list.domain.entities.Pin
 import com.bigo.networkloader.demo.pins.list.domain.entities.PinUrls
 import com.bigo.networkloader.demo.pins.list.domain.entities.ProfileImage
 import com.bigo.networkloader.demo.pins.list.domain.entities.User
-import com.bigo.networkloader.parser.NetworkLoader
+import com.bigo.networkloader.NetworkLoader
 import com.bigo.networkloader.parser.ResponseParser
 import com.nhaarman.mockitokotlin2.*
 import io.reactivex.Single

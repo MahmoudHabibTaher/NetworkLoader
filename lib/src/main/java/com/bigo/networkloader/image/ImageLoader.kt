@@ -3,7 +3,7 @@ package com.bigo.networkloader.image
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
-import com.bigo.networkloader.parser.NetworkLoader
+import com.bigo.networkloader.NetworkLoader
 import com.bigo.networkloader.parser.ResponseParser
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable

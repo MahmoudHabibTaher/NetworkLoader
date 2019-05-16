@@ -4,7 +4,7 @@ import com.bigo.networkloader.demo.core.mapper.ModelMapper
 import com.bigo.networkloader.demo.pins.list.data.remote.models.PinRemote
 import com.bigo.networkloader.demo.pins.list.domain.PinsRepository
 import com.bigo.networkloader.demo.pins.list.domain.entities.Pin
-import com.bigo.networkloader.parser.NetworkLoader
+import com.bigo.networkloader.NetworkLoader
 import com.bigo.networkloader.parser.ResponseParser
 import io.reactivex.Single
 
