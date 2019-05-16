@@ -2,9 +2,11 @@
 <resources>
     <dimen name="default_screen_horizontal_margin">16dp</dimen>
     <dimen name="default_screen_vertical_margin">8dp</dimen>
-    <dimen name="pin_image_size">200dp</dimen>
+    <dimen name="pin_image_size">250dp</dimen>
     <dimen name="user_name_end_margin">8dp</dimen>
     <dimen name="user_avatar_bottom_margin">8dp</dimen>
     <dimen name="user_profile_image_size">35dp</dimen>
     <dimen name="user_avatar_end_margin">10dp</dimen>
+    <dimen name="user_avatar_top_margin">8dp</dimen>
+    <dimen name="user_avatar_start_margin">8dp</dimen>
 </resources>

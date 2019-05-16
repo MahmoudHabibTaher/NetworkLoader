@@ -17,6 +17,7 @@
         <ImageView
                 android:id="@+id/pin_image_view"
                 app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:contentDescription="@null"
@@ -25,10 +26,11 @@
 
         <TextView
                 android:id="@+id/user_name_text_view"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 app:layout_constraintBottom_toBottomOf="@+id/user_avatar_image_view"
                 app:layout_constraintTop_toTopOf="@+id/user_avatar_image_view"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/user_avatar_image_view"
                 android:layout_marginEnd="@dimen/user_name_end_margin"
                 tools:text="John Doe"
                 android:layout_height="wrap_content"/>
@@ -36,10 +38,14 @@
         <ImageView
                 android:id="@+id/user_avatar_image_view"
                 android:layout_width="@dimen/user_profile_image_size"
+                app:layout_constraintStart_toStartOf="parent"
                 android:contentDescription="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/user_name_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/pin_image_view"
+                android:layout_marginTop="@dimen/user_avatar_top_margin"
+                android:layout_marginStart="@dimen/user_avatar_start_margin"
                 android:layout_marginEnd="@dimen/user_avatar_end_margin"
+                app:layout_constraintEnd_toStartOf="@+id/user_name_text_view"
                 android:layout_marginBottom="@dimen/user_avatar_bottom_margin"
                 android:layout_height="@dimen/user_profile_image_size"/>
 

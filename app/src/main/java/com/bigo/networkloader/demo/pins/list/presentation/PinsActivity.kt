@@ -1,6 +1,8 @@
 package com.bigo.networkloader.demo.pins.list.presentation
 
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
@@ -10,15 +12,19 @@ import com.bigo.networkloader.R
 import com.bigo.networkloader.demo.BaseActivity
 import com.bigo.networkloader.demo.core.log.logDebug
 import com.bigo.networkloader.demo.pins.list.domain.entities.Pin
+import com.bigo.networkloader.image.ImageLoader
 import kotlinx.android.synthetic.main.activity_pins.*
 import org.kodein.di.generic.factory
+import org.kodein.di.generic.instance
 
 class PinsActivity : BaseActivity() {
     private lateinit var viewModel: PinsListViewModel
 
     private val viewModelProvider: (AppCompatActivity) -> PinsListViewModel by factory()
 
-    private val pinsAdapter = PinsAdapter(mutableListOf())
+    private val imageLoader: ImageLoader by instance()
+
+    private val pinsAdapter by lazy { PinsAdapter(mutableListOf(), imageLoader) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,11 +63,15 @@ class PinsActivity : BaseActivity() {
     }
 
     private fun setLoadingVisible(visible: Boolean) {
-
+        loading_view.visibility = if (visible) View.VISIBLE else View.GONE
     }
 
     private fun showError(error: String) {
-
+        AlertDialog.Builder(this)
+            .setMessage(error)
+            .setPositiveButton(R.string.ok, null)
+            .create()
+            .show()
     }
 
     private fun showPins(pins: List<Pin>) {

@@ -21,10 +21,6 @@ open class HttpClientImpl(private val connectionBuilder: ConnectionBuilder) : Ht
 
             var connection: HttpsURLConnection? = null
 
-            emitter.setCancellable {
-                connection?.apply(::closeConnection)
-            }
-
             try {
                 connection = connectionBuilder.build(request.url, readTimeout, connectTimeout)
 
@@ -51,7 +47,23 @@ open class HttpClientImpl(private val connectionBuilder: ConnectionBuilder) : Ht
                     emitter.onError(ex)
                 }
             } finally {
-                connection?.apply(::closeConnection)
+                try {
+                    connection?.apply(::closeConnection)
+                } catch (ex: java.lang.Exception) {
+                    if (!emitter.isDisposed) {
+                        emitter.onError(ex)
+                    }
+                }
+            }
+
+            emitter.setCancellable {
+                try {
+                    connection?.apply(::closeConnection)
+                } catch (ex: java.lang.Exception) {
+                    if (!emitter.isDisposed) {
+                        emitter.onError(ex)
+                    }
+                }
             }
         }
 
