@@ -35,6 +35,10 @@ class PinsActivity : BaseActivity() {
             adapter = pinsAdapter
         }
 
+        pinsAdapter.setOnLoadMoreListener({
+            loadMorePins()
+        }, pins_recycler_view)
+
         viewModel = viewModelProvider(this)
 
         observePins(viewModel, this)
@@ -42,6 +46,10 @@ class PinsActivity : BaseActivity() {
         observeError(viewModel, this)
 
         viewModel.loadPins()
+    }
+
+    private fun loadMorePins() {
+        viewModel.loadMorePins()
     }
 
     private fun observePins(viewModel: PinsListViewModel, owner: LifecycleOwner) {
@@ -76,5 +84,6 @@ class PinsActivity : BaseActivity() {
 
     private fun showPins(pins: List<Pin>) {
         pinsAdapter.setNewData(pins)
+        pinsAdapter.loadMoreComplete()
     }
 }

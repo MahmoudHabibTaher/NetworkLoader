@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.bigo.networkloader.demo.core.domain.Params
 import com.bigo.networkloader.demo.core.domain.SingleUseCase
+import com.bigo.networkloader.demo.core.log.logDebug
 import com.bigo.networkloader.demo.core.log.logError
 import com.bigo.networkloader.demo.pins.list.domain.entities.Pin
 import io.reactivex.disposables.CompositeDisposable
@@ -30,6 +31,10 @@ class PinsListViewModel(
         MutableLiveData<List<Pin>>()
     }
 
+    private val pins = mutableListOf<Pin>()
+
+    private var currentPage = 1
+
     private val disposables = CompositeDisposable()
 
     private var isLoadingVisible: Boolean = false
@@ -38,12 +43,22 @@ class PinsListViewModel(
             loadingVisibleLiveData.postValue(value)
         }
 
-    fun loadPins() {
+    fun loadPins(page: Int = 1) {
+        logDebug("Load pins $page")
         isLoadingVisible = true
         val single = loadPins.getSingle()
         disposables.add(single.subscribeBy(onSuccess = {
-            pinsLiveData.postValue(it)
+            if (page == 1) {
+                pins.clear()
+            }
+
+            pins.addAll(it)
+
+            pinsLiveData.postValue(pins)
+
             isLoadingVisible = false
+
+            currentPage = page
         }, onError = {
             isLoadingVisible = false
             logError("Error loading pins", it)
@@ -51,6 +66,11 @@ class PinsListViewModel(
                 errorLiveData.postValue(this)
             }
         }))
+    }
+
+    fun loadMorePins() {
+        currentPage += 1
+        loadPins(currentPage)
     }
 
     override fun onCleared() {
